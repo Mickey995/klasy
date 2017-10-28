@@ -16,7 +16,7 @@ namespace klasy
         public string engine_type;
         public string car_type;
         public int driven_distance;
-        public float mpg;
+        public double mpg;
 
         public car(int year, string manufacturer, string model, string color,int enginesize,string enginetype,string cartype,float consumption)
         {
@@ -50,6 +50,12 @@ namespace klasy
         public void Repaint(string color)
         {
             this.color = color;
+        }
+        public double consumption()
+        {
+            double x = 235.21;
+            double wynik = x / this.mpg;
+            return wynik;
         }
          
     }
